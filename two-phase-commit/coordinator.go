@@ -122,9 +122,9 @@ func propose(p Participant, value string) (Answer, error) {
 	}
 
 	switch answer {
-	case "Ack":
+	case "Ack\n":
 		return AnswerAck, nil
-	case "Nack":
+	case "Nack\n":
 		return AnswerNack, nil
 	default:
 		fmt.Printf("propose: invalid answer %s", answer)
